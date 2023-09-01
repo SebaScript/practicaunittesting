@@ -42,7 +42,7 @@ class CalcPayment:
                 interest: float = round(self.interest_percentage * balance, 2)
                 capital_payment: float = round(payment_value - interest, 2)
                 balance: float = round(balance - capital_payment, 2)
-                if balance < 0 > -0.1:
+                if 0 > balance > -0.1:
                     balance = 0
                 row: list = [payment_number, balance, interest, capital_payment]
                 amortization_table.append(row)
@@ -85,7 +85,7 @@ class CalcPayment:
                 interest: float = round(self.interest_percentage * balance, 2)
                 capital_payment: float = round(payment_value - interest, 2)
                 balance: float = round(balance - capital_payment, 2)
-                if balance < 0 > -0.1:
+                if balance < 0:
                     balance = 0
                 row: list = [payment_number_table, balance, interest, capital_payment]
                 extra_payment_amortization_table.append(row)
